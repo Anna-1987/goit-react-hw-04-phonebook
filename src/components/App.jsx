@@ -22,16 +22,16 @@ export function App () {
    
     contacts.some(
       i =>
-        (i.name.toLowerCase() === contact.name.toLowerCase() &&
+        (i.name === contact.name.toLowerCase() &&
           i.number === contact.number) ||
         i.number === contact.number
     )
-      ? alert(`${name} ore ${number} is already in contacts`)
+      ? alert(`${name} or ${number} is already in contacts`)
       : setContacts([contact, ...contacts]);
   };
 
  const changeFilterInput = e => {
-    setFilter(e.target.value );
+    setFilter(e.target.value);
   };
 
   const findContacts = () => {
